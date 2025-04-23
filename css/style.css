@@ -1,0 +1,97 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+  color: white;
+  min-height: 100vh;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.cinema {
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 18px;
+  margin-bottom: 25px;
+  text-shadow: 0 0 10px #ffcc00;
+}
+
+.screen-border {
+  border: 10px solid #ffcc00;
+  padding: 10px;
+  background-color: #0f2027;
+  animation: CinemaShine 1.5s infinite alternate;
+  box-shadow: 0 0 15px #ffcc00;
+  border-radius: 12px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+@keyframes CinemaShine {
+  0% {
+    box-shadow: 0 0 10px #ffcc00;
+    border-color: #ffcc00;
+  }
+  50% {
+    box-shadow: 0 0 20px #ff9900;
+    border-color: #ff9900;
+  }
+  100% {
+    box-shadow: 0 0 10px #ffcc00;
+    border-color: #ffcc00;
+  }
+}
+
+video {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+/* Buttons container */
+.button {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+button {
+  background-color: #e0cf88;
+  color: #0f2027;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #d1bb72;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+
+  .screen-border {
+    padding: 5px;
+    border-width: 5px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
